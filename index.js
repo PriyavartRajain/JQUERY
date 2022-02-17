@@ -122,3 +122,94 @@ li: even refers to every item at an even place, and li: odd refers to every item
 //     let name = $('input#name').val(); // Grabs the value of the input field with id="name"
 //     console.log(name);
 // })
+
+/*Dom manipulation */
+
+/*Using multiple css properties */
+// $('p.para1').css({ color: 'red', background: '#ccc' });
+
+/*Adding a class */
+// $('p.para2').addClass('myClass');
+
+/*Removing a class */
+// $('p.para2').removeClass('myClass');
+
+/*Toggle a class upon an event*/
+// $('#btn1').click(function () {
+//     $('p.para2').toggleClass('myClass');
+// })
+
+/*Adding text to an element */
+// $('#myDiv').text('Hello World');
+
+/*Adding html to an element */
+// $('#myDiv').html('<h3>Hello World<h3>');
+
+/*Accessing and printing the text value of an element as an alert*/
+// alert($('#myDiv').text());
+
+/*Appending html to an element, e.g. adding a list item to a list */
+// $('ul').append('<li>New list item</li>');
+
+/*Prepending html to an element, e.g. adding a list item to the beginning of a list */
+// $('ul').prepend('<li>New list item</li>');
+
+/*Appending an element to another element */
+// $('.para1').appendTo('.para2');
+
+/*Prepending an element to another element */
+// $('.para1').prependTo('.para2');
+
+/*Adding elements before an element */
+/*Adds an h4 before ul */
+// $('ul').before('<h4>Hello</h4>');
+
+/*Adding elements after an element */
+/*Adds an h4 after ul */
+// $('ul').after('<h4>Hello</h4>');
+
+/*Clears all the inner html of an element */
+// $('ul').empty();
+
+/*Detaches an element completely from the document */
+// $('ul').detach();
+
+/*Opening a new tab when link clicked */
+// $('a').attr('target', '_blank');
+
+/*Wrapping specific elements inside other elements */
+/* syntax: $(selector).wrap("<wrappingElement></wrappingElement>");*/
+/* wraps EACH p element in a SEPARATE h1 */
+// $('p').wrap("<h1></h1>");
+
+/*wrapAll wraps ALL p elements in a SINGLE h1*/
+// $('p').wrapAll("<h1></h1>");
+
+/*Type items in a text input and add them to a list when enter is pressed */
+// $('#newItem').keyup(function (e) {
+//     var code = e.which;     // Grab the code for each key that is pressed when inside the input field with id newItem
+//     if (code == 13) {       // Code for enter key is 13
+//         e.preventDefault();
+//         $('ul').append('<li>' + e.target.value + '</li>');
+//     }
+// });
+
+/*Working with arrays */
+
+// /*Creating an array */
+// let myArr = ['Brad', 'Kelley', 'Nate', 'Jose'];
+
+// /*Iterating over the array
+//  Syntax:
+//  $.each(collection, function (indexInArray, valueOfElement) {
+//  });
+// */
+// $.each(myArr, function (i, val) {
+//     console.log(val);
+// });
+
+// /*Converting a list into an array */
+// let newArr = $('ul#list li').toArray();
+// $.each(newArr, function (i, val) {
+//     console.log(val.innerHTML);
+// });

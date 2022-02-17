@@ -18,3 +18,8 @@ header{
     margin: auto;
     padding: 10px;
 }
+
+.myClass{
+    color: orange;
+    background-color: #000;
+}
